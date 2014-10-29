@@ -9,7 +9,7 @@ public class Controller extends Model {
 	
 	private PreparedStatement saveNotes = null;
 	
-//Jeg har lavet en ny test 
+//Jeg har lavet en ny og gammel test 
 	
 	public Controller() {
 		super();
