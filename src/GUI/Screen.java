@@ -6,10 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 import java.awt.CardLayout;
 
+@SuppressWarnings("unused")
 public class Screen extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static final String LOGIN = "name_276091497157488";
 	public static final String MAINMENU = "name_276416022878030";
 	public static final String USERINFO = "name_277892826656058";

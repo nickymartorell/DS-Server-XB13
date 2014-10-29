@@ -5,14 +5,14 @@
 	import java.awt.Dimension;
 
 	import javax.swing.JLabel;
-	import javax.swing.ImageIcon;
-	import javax.swing.JTable;
-	import javax.swing.JTextField;
+import javax.swing.ImageIcon;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 
 	import java.awt.Font;
 
 	import javax.swing.SwingConstants;
-	import javax.swing.JButton;
+import javax.swing.JButton;
 
 	import java.awt.Color;
 
@@ -21,15 +21,21 @@
 	import java.awt.Component;
 
 	import javax.swing.border.CompoundBorder;
-	import javax.swing.border.BevelBorder;
-	import javax.swing.border.MatteBorder;
-	import javax.swing.JTextPane;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.MatteBorder;
+import javax.swing.JTextPane;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 
+	@SuppressWarnings("unused")
 	public class EventList extends JPanel {
 
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
 		/**
 		 * Create the panel.
 		 */

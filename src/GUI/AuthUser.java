@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 
 import GUI.UserInformation;
 
+@SuppressWarnings("unused")
 public class AuthUser {
 	public boolean login(String userName, String password)
 	{

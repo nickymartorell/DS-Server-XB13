@@ -21,7 +21,8 @@ import java.util.Iterator;
 public class ForecastModel {
 
 	     // Json parser to retrieve and map data from openweathermap.org
-	     private ArrayList<Forecast> forecastList = new ArrayList();
+	     @SuppressWarnings({ "unchecked", "rawtypes" })
+		private ArrayList<Forecast> forecastList = new ArrayList();
 	     private String weatherDescription = "";
 	     QueryBuilder qb = new QueryBuilder();
 	     
@@ -95,11 +96,13 @@ public class ForecastModel {
 	     }
 	     
 	     // Henter vejrudsigten og gemmer de hentede data i en ArrayList
-	     public ArrayList<Forecast> getForecast() throws SQLException{
+	     @SuppressWarnings("rawtypes")
+		public ArrayList<Forecast> getForecast() throws SQLException{
 	     	QueryBuilder qb = new QueryBuilder();
 	     	Date date = new Date(); // Current date & time
 	     	long maxTimeNoUpdate = 3600; // Maximum one hour with no update
-	     	ArrayList<Forecast> forecastFromDB = new ArrayList();
+	     	@SuppressWarnings("unchecked")
+			ArrayList<Forecast> forecastFromDB = new ArrayList();
 	     	
 	     	long date1 = date.getTime();
 	     	long date2 = date.getTime() - maxTimeNoUpdate; // minus 1 hour -- should be fetched from database

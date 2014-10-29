@@ -1,5 +1,8 @@
 public class CalendarInfo implements java.io.Serializable {
-		private  final long serialVersionUID = 1L;
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 		private String overallID = "createCourse";
 		private String activityID;
 		private  String eventID;

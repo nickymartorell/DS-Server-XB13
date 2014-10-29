@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import model.QueryBuild.*;
 import GUI.Screen;
 
+@SuppressWarnings("unused")
 public class GUILogic {
 	private Screen screen;
 	private boolean u;

@@ -28,7 +28,12 @@ import java.awt.Dimension;
 
 import javax.swing.JPasswordField;
 
+@SuppressWarnings("unused")
 public class Login extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private final JLabel lblWelcome = new JLabel("Welcome");
 	private final JLabel lblUsername = new JLabel("Username");
 	private final JLabel lblPassword = new JLabel("Password");

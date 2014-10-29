@@ -4,8 +4,8 @@ import java.awt.Dimension;
 
 //public class AddCourse {
 
-	import javax.swing.JPanel;
 
+	import javax.swing.JPanel;
 	import javax.swing.JLabel;
 	import javax.swing.ImageIcon;
 	import javax.swing.JTable;
@@ -28,6 +28,7 @@ import java.awt.Dimension;
 	import javax.swing.JTextPane;
 
 
+	@SuppressWarnings({ "unused", "serial" })
 	public class AddCourse extends JPanel {
 		private JTable table;
 		private final JButton btnAdd = new JButton("Add");

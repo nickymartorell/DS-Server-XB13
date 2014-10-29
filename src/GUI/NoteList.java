@@ -20,7 +20,12 @@ import javax.swing.border.MatteBorder;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.BevelBorder;
 
+@SuppressWarnings("unused")
 public class NoteList extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTable table;
 	private final JLabel lblBackground = new JLabel("");
 	private JLabel lblHeader;
