@@ -10,7 +10,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class Configurations {
-    private String host;
+    private String host; //= "localhost"; //evt fjern = "localhost" (Det er kun for at teste)
     private String port;
     private String username;
     private String dbname;
@@ -30,6 +30,7 @@ public class Configurations {
 
 
     public String getHost() {
+    	ReadFile();
         return host;
     }
 
@@ -38,6 +39,7 @@ public class Configurations {
     }
 
     public String getPort() {
+    	ReadFile();
         return port;
     }
 
@@ -46,7 +48,8 @@ public class Configurations {
     }
 
     public String getUsername() {
-        return username;
+       ReadFile();
+    	return username;
     }
 
     public void setUsername(String username) {
@@ -54,7 +57,8 @@ public class Configurations {
     }
 
     public String getPassword() {
-        return password;
+        ReadFile();
+    	return password;
     }
 
     public void setPassword(String password) {
@@ -62,6 +66,7 @@ public class Configurations {
     }
 
     public String getDbname() {
+    	ReadFile();
         return dbname;
     }
 
@@ -70,6 +75,7 @@ public class Configurations {
     }
 
     public String getFfcryptkey() {
+    	ReadFile();
         return ffcryptkey;
     }
 
@@ -81,6 +87,7 @@ public class Configurations {
 // Weather settrs and getters.
 
     public String getWeather_expiration_time() {
+    	ReadFile();
         return weather_expiration_time;
     }
 
@@ -90,6 +97,7 @@ public class Configurations {
 
 
     public String getWeather_lat() {
+    	ReadFile();
         return weather_lat;
     }
 
@@ -99,6 +107,7 @@ public class Configurations {
 
 
     public String getWeather_lon() {
+    	ReadFile();
         return weather_lon;
     }
 
@@ -107,6 +116,7 @@ public class Configurations {
     }
 
     public String getWeather_future_in_days() {
+    	ReadFile();
         return weather_future_in_days;
     }
 
