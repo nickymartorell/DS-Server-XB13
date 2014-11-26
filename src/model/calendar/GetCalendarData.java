@@ -1,17 +1,22 @@
 package model.calendar;
 
 import com.google.gson.Gson;
+import com.mysql.jdbc.Connection;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
+import model.Model;
+
 /**
  * Created by jesperbruun on 13/10/14.
  */
+
 public class GetCalendarData {
 	
 	EncryptUserID e = new EncryptUserID();
+
 
 	//henter data fra URL og l??er ind til en string
     private static String readUrl(String urlString) throws Exception {
@@ -45,17 +50,25 @@ public class GetCalendarData {
          * Get URL From calendar.cbs.dk -> Subscribe -> change URL to end with .json
          * Encrypt hash from
          */
-    	String userID = "1234";
-        String json = readUrl("http://calendar.cbs.dk/events.php/"+userID+"/"+e.getKey()+".json");
-//        String json = readUrl("http://calendar.cbs.dk/events.php/caha13ag/02a24d4e002e6e3571227c39e2f63784.json");
+    	String userID = "mamu13ag";
+        String json = readUrl("http://calendar.cbs.dk/events.php/"+userID+"/"+e.getKey(userID)+".json");
+        //String json = readUrl("http://calendar.cbs.dk/events.php/caha13ag/02a24d4e002e6e3571227c39e2f63784.json");
         
 
         Gson gson = new Gson();
-        Events events = gson.fromJson(json, Events.class); 
+        EventCreator events = gson.fromJson(json, EventCreator.class); 
 
         //tester events activityID's
         for (int i = 0; i < events.getEvents().size(); i++){
             System.out.println(events.getEvents().get(i).getActivityid());
+            System.out.println(events.getEvents().get(i).getStart());
+            System.out.println(events.getEvents().get(i).getEnd());
+            System.out.println(events.getEvents().get(i).getLocation());         
         }
+    }
+    
+    public static void main (String[]args) throws Exception{
+    	new GetCalendarData().getDataFromCalendar();
+    	
     }
 }
