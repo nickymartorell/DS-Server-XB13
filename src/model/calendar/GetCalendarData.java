@@ -16,7 +16,7 @@ import model.Model;
 
 public class GetCalendarData {
 	
-	EncryptUserID e = new EncryptUserID();
+	EncryptUserId e = new EncryptUserId();
 
 
 	//henter data fra URL og l??er ind til en string
@@ -51,20 +51,20 @@ public class GetCalendarData {
          * Get URL From calendar.cbs.dk -> Subscribe -> change URL to end with .json
          * Encrypt hash from
          */
-    	String userID = "mamu13ag";
-        String json = readUrl("http://calendar.cbs.dk/events.php/"+userID+"/"+e.getKey(userID)+".json");
+    	String userId = "mamu13ag";
+        String json = readUrl("http://calendar.cbs.dk/events.php/"+userId+"/"+e.getKey(userId)+".json");
         //String json = readUrl("http://calendar.cbs.dk/events.php/caha13ag/02a24d4e002e6e3571227c39e2f63784.json");
         
 
         Gson gson = new Gson();
         EventCreator events = gson.fromJson(json, EventCreator.class); 
 
-        //tester events activityID's
+        //tester events activityId's
         for (int i = 0; i < events.getEvents().size(); i++){
               System.out.println(events.getEvents().get(i).getActivityId());
               System.out.println(events.getEvents().get(i).getStart());
-//            System.out.println(events.getEvents().get(i).getEnd());
-//            System.out.println(events.getEvents().get(i).getLocation());         
+              System.out.println(events.getEvents().get(i).getEnd());
+              System.out.println(events.getEvents().get(i).getLocation());         
         }
     }
        

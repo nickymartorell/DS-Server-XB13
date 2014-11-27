@@ -6,7 +6,7 @@ import java.security.MessageDigest;
  * Created by jesperbruun on 23/09/14.
  */
 
-public class EncryptUserID {
+public class EncryptUserId {
 
     /**
      * Constant cipher seed - DO NOT CHANGE.
