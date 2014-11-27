@@ -83,6 +83,8 @@ public class SwitchMethods extends Model
 	{
 		String stringToBeReturned ="";
 		
+		
+		//huske at rette navnet til det rigtige navn på vores databaser!!!
 		resultSet = qb.selectFrom("Calendar").where("Name", "=", userName).ExecuteQuery();
 		
 		while(resultSet.next())
@@ -92,6 +94,47 @@ public class SwitchMethods extends Model
 		return stringToBeReturned;
 	}
 
+
+	public String getEvents(String createdBy) throws SQLException{
+		String stringToBeReturned ="";
+		
+		// er det den rigtige database?
+		resultSet = qb.selectFrom("Events").where("CreatedBy", "=", createdBy).ExecuteQuery();
+		
+		while(resultSet.next()){
+			stringToBeReturned += resultSet.toString();
+		}
+		
+		
+		return stringToBeReturned;
+	}
+	
+	
+	
+	/*public String GetEvents(String createdby) throws SQLException
+	{
+		String stringToBeReturned ="";
+		
+		resultSet = qb.selectFrom("events").where("createdby", "=", createdby).ExecuteQuery();
+		
+		while(resultSet.next())
+		{
+			stringToBeReturned += resultSet.toString();
+		}
+		return stringToBeReturned;*/
+	
+	public String GetNote(String eventId) throws SQLException
+	{
+		String stringToBeReturned ="";
+		
+		resultSet = qb.selectFrom("notes").where("eventId", "=", eventId).ExecuteQuery();
+		
+		while(resultSet.next())
+		{
+			stringToBeReturned += resultSet.toString();
+		}
+		return stringToBeReturned;
+	}
 	
 	public String removeCalendar (String userName, String calendarName) throws SQLException
 	{
@@ -188,4 +231,9 @@ public class SwitchMethods extends Model
 			return "1"; // returnerer fejlkoden "1" hvis email ikke findes
 		}
 	}
-}
+
+
+
+	
+	}
+

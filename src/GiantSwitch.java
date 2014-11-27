@@ -8,6 +8,8 @@ import JsonClasses.CalendarInfo;
 import JsonClasses.CreateCalendar;
 import JsonClasses.DeleteCalendar;
 import JsonClasses.getCalendar;
+import JsonClasses.getEvents;
+import JsonClasses.getNote;
 
 import com.google.gson.*;
 
@@ -81,7 +83,11 @@ public class GiantSwitch {
 			break;
 
 		case "getEvents":
+			getEvents GE = (getEvents)gson.fromJson(jsonString, getEvents.class);
 			System.out.println("Recieved getEvents");
+			answer = SW.getEvents(GE.Createdby());
+			
+			
 			break;
 
 		case "createEvent":
@@ -98,10 +104,14 @@ public class GiantSwitch {
 		case "saveNote":
 			System.out.println("Recieved saveNote");
 			break;
+			
 
 		case "getNote":
+			getNote GN =(getNote)gson.fromJson(jsonString, getNote.class);
 			System.out.println("Recieved getNote");
+			answer = SW.GetNote(GN.geteventID);
 			break;
+			
 			
 		case "deleteNote":
 			System.out.println("Recieved deleteNote");
