@@ -44,9 +44,8 @@ public class SwitchMethods extends Model
 		getConn();
 		boolean authenticate = false;
 		
-		resultSet= qb.selectFrom("calendar").where("name", "=", newCalendarName).ExecuteQuery();
-				
-				//("select * from test.calender where Name = '"+newCalenderName+"';");
+		resultSet= qb.selectFrom("cbscalendar").where("name", "=", newCalendarName).ExecuteQuery();
+			
 		while(resultSet.next())
 		{
 			authenticate = true;
@@ -59,7 +58,7 @@ public class SwitchMethods extends Model
 		String [] keys = {"Name","active","CreatedBy","PrivatePublic"};
 		String [] values = {newCalendarName,"1",userName, Integer.toString(publicOrPrivate)};
 	//	qb.update("calendar", keys, values).all().Execute(); OBS Denne er fjernet efter forl�sning
-		qb.insertInto("calendar", keys).values(values).Execute();
+		qb.insertInto("cbscalendar", keys).values(values).Execute();
 //		doUpdate("insert into test.calender (Name, Active, CreatedBy, PrivatePublic) VALUES ('"+newCalenderName+"', '1', '"+userName+"', '"+publicOrPrivate+"');");
 	}
 	/**
