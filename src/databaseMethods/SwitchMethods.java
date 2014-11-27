@@ -220,7 +220,52 @@ public class SwitchMethods extends Model
 	}
 
 
+	
+	public String createEvents(String EventName, String userName, String Title, String Type, String Description, String Location, String Createdby, String ActivityID) throws SQLException{
+		String stringToBeReturned = "";
+		testConnection();
+		
+		if(autenticateNewEvent(EventName) ==false){
+			addNewEvent(EventName, Title, Type, Description, Location, Createdby, ActivityID);
+			stringToBeReturned = "The new event has been created!!";
+		}
+		else{
+			stringToBeReturned = "The new event has not been created :( ";
+		}
+		return stringToBeReturned;
+	}
+
+//IKKE SIKKER PÅ AT DET ER KORREKT DET HER!! 
+
+	private void addNewEvent(String eventName, String title, String type, String description, String location, String createdby,String activityID) throws SQLException {
+		String [] keys = {"Name", "title", "type", "description", "location","createdby","activityID"};
+		String [] values = {eventName, title, type, description, location, createdby, activityID};
+		qb.insertInto("cbsCalendar", keys).values(values).Execute();
+		
+	}
+
+//IKKE SIKKER PÅ AT DET ER KORREKT
+
+	private boolean autenticateNewEvent(String eventName) throws SQLException {
+		getConn();
+		boolean authenticate = false;
+		resultSet = qb.selectFrom("cbscalendar").where("name","=", eventName).ExecuteQuery();
+		
+		while(resultSet.next()){
+			authenticate = true;
+		}
+		
+		return authenticate;
+	}
+
 
 	
-	}
+}
+
+	
+	
+	
+
+
+	
 

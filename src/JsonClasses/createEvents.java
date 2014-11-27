@@ -10,7 +10,15 @@ public class createEvents {
 	private String Location;
 	private String Createdby;
 	private String ActivityID;
-
+	private String EventName;
+	
+	public String getEventName(){
+	return EventName;
+	}
+	
+	public void setEventName(String EventName){
+		this.EventName = EventName;
+	}
 	
 	public String getuserName(){
 		return userName;

@@ -92,6 +92,7 @@ public class GiantSwitch {
 		case "createEvent":
 			createEvents CE = (createEvents)gson.fromJson(jsonString, createEvents.class);
 			System.out.println("Recieved saveEvent");
+			answer = SW.createEvents(CE.getEventName(), CE.getDescription(), CE.getLocation(), CE.getTitle(), CE.getType(), CE.getuserName(), CE.getActivityID(), CE.getCreatedby());
 			break;
 
 		case "getEventInfo":
@@ -100,6 +101,7 @@ public class GiantSwitch {
 			
 		case "deleteEvent":
 			System.out.println("Recieved deleteEvent");
+			break;
 		
 		case "saveNote":
 			System.out.println("Recieved saveNote");
