@@ -32,7 +32,7 @@ public class ClientWorker implements  Runnable{
 			String ny = cryp.decrypt(b);
 			
 			//cryp.StringEncryption(inFromClient.readLine());
-			System.out.println("Besked modtaget!");
+			System.out.println("Besked modtaget!!");
 			//Sysout recieved message
 			System.out.println("Received: " + ny);
 			String returnSvar = GS.GiantSwitchMethod(ny);		
