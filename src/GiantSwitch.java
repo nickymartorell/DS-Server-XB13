@@ -8,9 +8,13 @@ import JsonClasses.CalendarInfo;
 import JsonClasses.CreateCalendar;
 import JsonClasses.DeleteCalendar;
 import JsonClasses.createEvents;
+import JsonClasses.deleteEvent;
+import JsonClasses.deleteNote;
 import JsonClasses.getCalendar;
+import JsonClasses.getEventInfo;
 import JsonClasses.getEvents;
 import JsonClasses.getNote;
+import JsonClasses.saveNote;
 
 import com.google.gson.*;
 
@@ -96,15 +100,23 @@ public class GiantSwitch {
 			break;
 
 		case "getEventInfo":
+			getEventInfo GEI = (getEventInfo)gson.fromJson(jsonString, getEventInfo.class);
 			System.out.println("Recieved getEventInfo");
+			//mangler metode i SwitchMethods
+			
+			
 			break;
 			
 		case "deleteEvent":
+			deleteEvent DE = (deleteEvent)gson.fromJson(jsonString, deleteEvent.class);
 			System.out.println("Recieved deleteEvent");
+			//mangler metode i SwitchMethods
 			break;
 		
 		case "saveNote":
+			saveNote SN = (saveNote)gson.fromJson(jsonString, saveNote.class);
 			System.out.println("Recieved saveNote");
+			//mangler metode i SwitchMethods
 			break;
 			
 
@@ -116,7 +128,9 @@ public class GiantSwitch {
 			
 			
 		case "deleteNote":
+			deleteNote DN = (deleteNote)gson.fromJson(jsonString, deleteNote.class);
 			System.out.println("Recieved deleteNote");
+			//mangler metode i SwitchMethods
 			break;
 
 		/**********
