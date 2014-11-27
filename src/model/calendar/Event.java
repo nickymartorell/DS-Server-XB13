@@ -18,10 +18,10 @@ public class Event {
     private ArrayList<String> end;
 
     // Settere og gettere for Event objektet 
-    public void setActivityid(String activityId){
+    public void setActivityId(String activityId){
         this.activityId = activityId;
     }
-    public String getActivityid(){
+    public String getActivityId(){
         return activityId;
     }
 
@@ -80,7 +80,7 @@ public class Event {
     public ArrayList<String> getEnd(){
         return end;
     }
-	public Event(String activityId, String eventid, String type, String title,
+	public Event(String activityId, String eventId, String type, String title,
 			String description, String location, String createdby, ArrayList<String> start,
 			ArrayList<String> end) {
 		super();

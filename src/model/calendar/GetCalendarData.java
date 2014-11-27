@@ -61,10 +61,10 @@ public class GetCalendarData {
 
         //tester events activityID's
         for (int i = 0; i < events.getEvents().size(); i++){
-            System.out.println(events.getEvents().get(i).getActivityid());
-            System.out.println(events.getEvents().get(i).getStart());
-            System.out.println(events.getEvents().get(i).getEnd());
-            System.out.println(events.getEvents().get(i).getLocation());         
+              System.out.println(events.getEvents().get(i).getActivityId());
+              System.out.println(events.getEvents().get(i).getStart());
+//            System.out.println(events.getEvents().get(i).getEnd());
+//            System.out.println(events.getEvents().get(i).getLocation());         
         }
     }
        

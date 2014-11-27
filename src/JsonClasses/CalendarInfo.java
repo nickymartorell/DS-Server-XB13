@@ -5,17 +5,17 @@ public class CalendarInfo implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-		private String overallID = "createCalendar";
+		private String overallId = "createCalendar";
 		private String calendarName;
 		private String userName;
 		private int publicOrPrivate;
 		
 		//Getters and setters for everything, bitch
-		public String getOverallID() {
-			return overallID;
+		public String getOverallId() {
+			return overallId;
 		}
-		public void setOverallID(String overallID) {
-			this.overallID = overallID;
+		public void setOverallId(String overallId) {
+			this.overallId = overallId;
 		}
 		public String getCalendarName() {
 			return calendarName;

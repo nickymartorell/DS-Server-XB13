@@ -3,9 +3,9 @@ public class CalendarInfo implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-		private String overallID = "createCourse";
-		private String activityID;
-		private  String eventID;
+		private String overallId = "createCourse";
+		private String activityId;
+		private  String eventId;
 		private  String type;
 		private  String title;
 		private  String description;
@@ -15,17 +15,17 @@ public class CalendarInfo implements java.io.Serializable {
 		
 		
 		//Getters and setters
-		public String getActivityID() {
-			return activityID;
+		public String getActivityId() {
+			return activityId;
 		}
-		public  void setActivityID(String activityID) {
-			this.activityID = activityID;
+		public  void setActivityId(String activityId) {
+			this.activityId = activityId;
 		}
-		public  String getEventID() {
-			return eventID;
+		public  String getEventId() {
+			return eventId;
 		}
-		public  void setEventID(String eventID) {
-			this.eventID = eventID;
+		public  void setEventId(String eventId) {
+			this.eventId = eventId;
 		}
 		public  String getType() {
 			return type;
@@ -63,11 +63,11 @@ public class CalendarInfo implements java.io.Serializable {
 		public  void setLocation(String location) {
 		this.location = location;
 		}
-		public String getOverallID() {
-			return overallID;
+		public String getOverallId() {
+			return overallId;
 		}
-		public void setOverallID(String overallID) {
-			this.overallID = overallID;
+		public void setOverallId(String overallId) {
+			this.overallId = overallId;
 		}
 }
 
