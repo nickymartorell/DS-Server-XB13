@@ -23,7 +23,7 @@ public class EventCreator {
 			while (rs.next())
 			{
 				//String values from SQL database (must be created)
-				int eventID = rs.getInt("eventid");
+				int eventID = rs.getInt("eventId");
 				int type = rs.getInt("type");
 				int location = rs.getInt("location");
 				int createdby = rs.getInt("createdby");

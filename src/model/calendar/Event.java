@@ -7,8 +7,8 @@ import java.util.ArrayList;
  * Til hver specifik event bliver de defineret saaledes.
  */
 public class Event {
-    private String activityid;
-    private String eventid;
+    private String activityId;
+    private String eventId;
     private String type;
     private String title;
     private String description;
@@ -18,18 +18,18 @@ public class Event {
     private ArrayList<String> end;
 
     // Settere og gettere for Event objektet 
-    public void setActivityid(String activityid){
-        this.activityid = activityid;
+    public void setActivityid(String activityId){
+        this.activityId = activityId;
     }
     public String getActivityid(){
-        return activityid;
+        return activityId;
     }
 
-    public void setEventid(String eventid){
-        this.eventid = eventid;
+    public void setEventId(String eventId){
+        this.eventId = eventId;
     }
-    public String getEventid(){
-        return eventid;
+    public String getEventId(){
+        return eventId;
     }
 
     public void setType(String type){
@@ -80,12 +80,12 @@ public class Event {
     public ArrayList<String> getEnd(){
         return end;
     }
-	public Event(String activityid, String eventid, String type, String title,
+	public Event(String activityId, String eventid, String type, String title,
 			String description, String location, String createdby, ArrayList<String> start,
 			ArrayList<String> end) {
 		super();
-		this.activityid = activityid;
-		this.eventid = eventid;
+		this.activityId = activityId;
+		this.eventId = eventId;
 		this.type = type;
 		this.title = title;
 		this.description = description;
@@ -94,4 +94,6 @@ public class Event {
 		this.start = start;
 		this.end = end;
 	}
+	
+	
 }
