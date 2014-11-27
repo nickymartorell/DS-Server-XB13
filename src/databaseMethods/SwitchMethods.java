@@ -64,7 +64,7 @@ public class SwitchMethods extends Model
 //		doUpdate("insert into test.calender (Name, Active, CreatedBy, PrivatePublic) VALUES ('"+newCalenderName+"', '1', '"+userName+"', '"+publicOrPrivate+"');");
 	}
 	/**
-	 * Allows the client to delete a calendar
+	 * Allows the client to delete a calendar 
 	 * @param userName
 	 * @param calenderName
 	 * @return
