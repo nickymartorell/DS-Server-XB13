@@ -7,6 +7,7 @@ import JsonClasses.AuthUser;
 import JsonClasses.CalendarInfo;
 import JsonClasses.CreateCalendar;
 import JsonClasses.DeleteCalendar;
+import JsonClasses.createEvents;
 import JsonClasses.getCalendar;
 import JsonClasses.getEvents;
 import JsonClasses.getNote;
@@ -86,11 +87,10 @@ public class GiantSwitch {
 			getEvents GE = (getEvents)gson.fromJson(jsonString, getEvents.class);
 			System.out.println("Recieved getEvents");
 			answer = SW.getEvents(GE.Createdby());
-			
-			
 			break;
 
 		case "createEvent":
+			createEvents CE = (createEvents)gson.fromJson(jsonString, createEvents.class);
 			System.out.println("Recieved saveEvent");
 			break;
 

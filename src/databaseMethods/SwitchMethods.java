@@ -108,20 +108,7 @@ public class SwitchMethods extends Model
 		
 		return stringToBeReturned;
 	}
-	
-	
-	
-	/*public String GetEvents(String createdby) throws SQLException
-	{
-		String stringToBeReturned ="";
-		
-		resultSet = qb.selectFrom("events").where("createdby", "=", createdby).ExecuteQuery();
-		
-		while(resultSet.next())
-		{
-			stringToBeReturned += resultSet.toString();
-		}
-		return stringToBeReturned;*/
+
 	
 	public String GetNote(String eventId) throws SQLException
 	{
