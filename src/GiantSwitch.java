@@ -7,6 +7,7 @@ import JsonClasses.AuthUser;
 import JsonClasses.CalendarInfo;
 import JsonClasses.CreateCalendar;
 import JsonClasses.DeleteCalendar;
+import JsonClasses.getCalendar;
 
 import com.google.gson.*;
 
@@ -74,7 +75,9 @@ public class GiantSwitch {
 			break;
 			
 		case "getCalendar":
+			getCalendar GC = (getCalendar)gson.fromJson(jsonString, getCalendar.class);
 			System.out.println("Recieved getCalendar");
+			answer = SW.getCalendar(GC.getUserName());
 			break;
 
 		case "getEvents":
@@ -130,7 +133,7 @@ public class GiantSwitch {
 		
 	}
 
-	//Creates a loooong else if statement, which checks the JSon string which keyword it contains, and returns the following 
+	//Creates a long else if statement, which checks the JSon string which keyword it contains, and returns the following 
 	//keyword if
 	public String Determine(String ID) {
 

@@ -39,6 +39,8 @@ public class SwitchMethods extends Model
 		return stringToBeReturned;
 	}
 	
+	
+	
 	public boolean authenticateNewCalendar(String newCalendarName) throws SQLException
 	{
 		getConn();
@@ -75,6 +77,21 @@ public class SwitchMethods extends Model
 
 		return stringToBeReturned;
 	}
+	
+	
+	public String getCalendar(String userName) throws SQLException
+	{
+		String stringToBeReturned ="";
+		
+		resultSet = qb.selectFrom("Calendar").where("Name", "=", userName).ExecuteQuery();
+		
+		while(resultSet.next())
+		{
+			stringToBeReturned += resultSet.toString();
+		}
+		return stringToBeReturned;
+	}
+
 	
 	public String removeCalendar (String userName, String calendarName) throws SQLException
 	{
