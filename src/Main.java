@@ -1,5 +1,5 @@
 import GUI.GUILogic;
-import config.Configurations;
+import controller.Configurations;
 
 public class Main {
 	//Starts public main method.

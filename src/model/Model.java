@@ -1,7 +1,8 @@
 package model;
 
 import com.ibatis.common.jdbc.ScriptRunner;
-import config.Configurations;
+
+import controller.Configurations;
 
 import java.io.*;
 import java.sql.*;
