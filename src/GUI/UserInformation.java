@@ -1,4 +1,4 @@
-package View;
+package GUI;
 
 // Fig. 28.30: Person.java
 // Person class that represents an entry in an address book.

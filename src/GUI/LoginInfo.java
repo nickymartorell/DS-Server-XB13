@@ -1,4 +1,4 @@
-package View;
+package GUI;
 
 public class LoginInfo {
 	public void info(){

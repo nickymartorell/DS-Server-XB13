@@ -1,8 +1,8 @@
-package View;
+package GUI;
 
 import java.sql.ResultSet;
 
-import View.UserInformation;
+import GUI.UserInformation;
 
 @SuppressWarnings("unused")
 public class AuthUser {

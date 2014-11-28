@@ -1,15 +1,16 @@
-package View;
+package GUI;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 
+import GUI.UserInformation;
+import GUI.AuthUser;
+
 import javax.swing.JOptionPane;
 
-import View.AuthUser;
-import View.Screen;
-import View.UserInformation;
 import model.QueryBuild.*;
+import GUI.Screen;
 
 @SuppressWarnings("unused")
 public class GUILogic {

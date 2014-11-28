@@ -1,5 +1,4 @@
-package Main;
-import View.GUILogic;
+import GUI.GUILogic;
 import controller.Configurations;
 
 public class Main {
