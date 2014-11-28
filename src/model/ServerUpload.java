@@ -1,10 +1,10 @@
-package fileUpload;
+package model;
 
 import java.io.*;
 import java.net.*;
 
  
-class Server
+class ServerUpload
 {
     public void serverUpload () throws IOException
     {
