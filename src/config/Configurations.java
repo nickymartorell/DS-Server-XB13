@@ -1,4 +1,4 @@
-package controller;
+package config;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -1,6 +1,6 @@
 import javax.xml.bind.ParseConversionEvent;
 
-import controller.Configurations;
+import config.Configurations;
 
 
 public class encryption {
