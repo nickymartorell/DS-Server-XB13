@@ -1,3 +1,4 @@
+package databaseMethods;
 import java.sql.SQLException;
 
 import model.QOTD.QOTDModel;
@@ -17,8 +18,6 @@ import JsonClasses.getNote;
 import JsonClasses.saveNote;
 
 import com.google.gson.*;
-
-import databaseMethods.SwitchMethods;
 
 @SuppressWarnings("unused")
 public class GiantSwitch {
